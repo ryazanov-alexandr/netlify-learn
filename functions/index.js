@@ -13,13 +13,13 @@ const io = require("socket.io")(server, {
   });
 
 app.get('/', (req, res) => {
-    res.send('Hello')
+    res.sendFile('C:/OSPanel/domains/netlify-learn/dist/index.html')
 })
 
 const PORT = process.env.PORT || 8888;
 
 server.listen(PORT, () => {
-    console.log("start listenning "+ PORT);
+    console.log("start listening "+ PORT);
 })
 
 let connectedUsers = []; 
